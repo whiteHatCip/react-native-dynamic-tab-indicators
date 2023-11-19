@@ -1,12 +1,29 @@
 import * as React from 'react';
 
 import { StyleSheet, View } from 'react-native';
-import { DynamicTabIndicatorsView } from 'react-native-dynamic-tab-indicators';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { DynamicTabBar } from 'react-native-dynamic-tab-indicators';
+import type { Tab } from 'react-native-dynamic-tab-indicators';
+
+const tabs: Tab[] = [
+  { tabName: 'Men', imageSrc: require('../assets/tabsBackgrounds/man.jpg') },
+  {
+    tabName: 'Women',
+    imageSrc: require('../assets/tabsBackgrounds/woman.jpg'),
+  },
+  { tabName: 'Kids', imageSrc: require('../assets/tabsBackgrounds/kid.jpg') },
+  {
+    tabName: 'Home Decor',
+    imageSrc: require('../assets/tabsBackgrounds/home-decor.jpg'),
+  },
+];
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <DynamicTabIndicatorsView color="#32a852" style={styles.box} />
+      <SafeAreaProvider>
+        <DynamicTabBar tabs={tabs} />
+      </SafeAreaProvider>
     </View>
   );
 }
@@ -14,12 +31,5 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
   },
 });
