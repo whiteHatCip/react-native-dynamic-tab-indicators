@@ -1,6 +1,6 @@
 {
   "name": "react-native-dynamic-tab-indicators",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A simple component that allows to show swipeable tabs in a screen, with a really nice animated indicator that follows user's finger when swiping through tabs and that resizes based on the tab's width.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -37,7 +37,9 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "tabs",
+    "swipeable"
   ],
   "repository": "https://github.com/whiteHatCip/react-native-dynamic-tab-indicators",
   "author": "Fabio Cipriani <whiteHatCip@users.noreply.github.com> (https://github.com/whiteHatCip)",
